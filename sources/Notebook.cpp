@@ -16,7 +16,7 @@ namespace ariel
         }
         for(char i : toWrite)
         {
-            if(i > CHAR_UP_LIMIT ||i < CHAR_LOW_LIMIT)
+            if(i > CHAR_UP_LIMIT ||i < CHAR_LOW_LIMIT || i == '~')
             {
                 return 3;
             }

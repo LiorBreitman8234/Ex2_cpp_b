@@ -94,6 +94,10 @@ namespace ariel
         }
     }
     void Notebook::show(int page) {
+        if(page < 0)
+        {
+            throw std::invalid_argument("page number cant be negative!");
+        }
         auto it = this->pagesRef.find(page);
         if(it == this->pagesRef.end())
         {
